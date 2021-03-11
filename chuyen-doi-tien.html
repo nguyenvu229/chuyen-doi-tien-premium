@@ -64,7 +64,7 @@
               result = amount * rateVnEuro
               break;
           }
-          break;
+        break;
 
         case "USD":
           switch (to) {
@@ -75,7 +75,7 @@
               result = amount * rateUsdEuro
               break;
           }
-          break;
+        break;
 
         case "EURO":
           switch (to) {
@@ -86,7 +86,7 @@
               result = amount / rateUsdEuro
             break;
           }
-          break;
+        break;
       }
       document.getElementById("result").innerHTML = amount + " " + from + " = " + result + " " + to
     }
