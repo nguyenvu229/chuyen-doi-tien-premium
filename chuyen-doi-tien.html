@@ -18,7 +18,7 @@
 
   <label>From Currency</label>
   <select id="from"> 
-    <option value="VN">VN Đồng</option>
+    <option value="VND">VND</option>
     <option value="USD">USD</option>
     <option value="EURO">EURO</option>
   </select>
@@ -26,7 +26,7 @@
   <br><br>
   <label>To Currency</label>
   <select id = "to"> 
-    <option value="VN">VN Đồng</option>
+    <option value="VND">VND</option>
     <option value="USD">USD</option>
     <option value="EURO">EURO</option>
   </select>
@@ -50,26 +50,26 @@
       let to = document.getElementsByTagName("option")[toIndex].value
 
       let result = amount
-      let rateVnUsd = 1 / 23200
-      let rateVnEuro = 1 / 27000
+      let rateVndUsd = 1 / 23200
+      let rateVndEuro = 1 / 27000
       let rateUsdEuro = 23200 / 27000
      
       switch (from) {
-        case "VN":
+        case "VND":
           switch (to) {
             case "USD":
-              result = amount * rateVnUsd
+              result = amount * rateVndUsd
               break;
             case "EURO":
-              result = amount * rateVnEuro
+              result = amount * rateVndEuro
               break;
           }
         break;
 
         case "USD":
           switch (to) {
-            case "VN":
-              result = amount / rateVnUsd
+            case "VND":
+              result = amount / rateVndUsd
               break;
             case "EURO":
               result = amount * rateUsdEuro
@@ -79,8 +79,8 @@
 
         case "EURO":
           switch (to) {
-            case "VN":
-              result = amount / rateVnEuro
+            case "VND":
+              result = amount / rateVndEuro
             break;
             case "USD":
               result = amount / rateUsdEuro
