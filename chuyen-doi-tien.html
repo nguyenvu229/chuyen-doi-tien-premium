@@ -49,7 +49,7 @@
       let toIndex = document.getElementById("to").selectedIndex
       let to = document.getElementsByTagName("option")[toIndex].value
 
-      let result = 0
+      let result = amount
       let rateVnUsd = 1 / 23200
       let rateVnEuro = 1 / 27000
       let rateUsdEuro = 23200 / 27000
@@ -57,9 +57,6 @@
       switch (from) {
         case "VN":
           switch (to) {
-            case "VN":
-              result = amount
-              break;
             case "USD":
               result = amount * rateVnUsd
               break;
@@ -71,9 +68,6 @@
 
         case "USD":
           switch (to) {
-            case "USD":
-              result = amount
-              break;
             case "VN":
               result = amount / rateVnUsd
               break;
@@ -85,9 +79,6 @@
 
         case "EURO":
           switch (to) {
-            case "EURO":
-              result = amount
-              break;
             case "VN":
               result = amount / rateVnEuro
             break;
