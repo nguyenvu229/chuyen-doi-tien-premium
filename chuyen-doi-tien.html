@@ -62,9 +62,8 @@
               break;
             case "EURO":
               result = amount / rateEuroVnd
-              break;
           }
-        break;
+          break;
 
         case "USD":
           switch (to) {
@@ -73,20 +72,17 @@
               break;
             case "EURO":
               result = amount * rateUsdEuro
-              break;
           }
-        break;
+          break;
 
         case "EURO":
           switch (to) {
             case "VND":
               result = amount * rateEuroVnd
-            break;
+              break;
             case "USD":
               result = amount / rateUsdEuro
-            break;
           }
-        break;
       }
       document.getElementById("result").innerHTML = amount + " " + from + " = " + result + " " + to
     }
